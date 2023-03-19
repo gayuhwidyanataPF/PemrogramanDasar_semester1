@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hai").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "green");
+                },
+                click: function () {
+                    $(this).css("background-color", "red");
+                }
+            })
+        })
+
+        $(document).ready(function () {
+            $(".iya").focus(function () {
+                $(this).css("background-color", "green");
+            });
+            $(".iya").blur(function () {
+                $(this).css("background-color", "red");
+            });
+        })
+
+        $(document).ready(function () {
+            $("#klik").click(function () {
+                $(".deskripsi").hide();
+            });
+            $("#muncul").click(function () {
+                $(".deskripsi").show();
+            });
+            $("#sebagian").click(function(){
+                $("#txt").hide();
+            });
+            $("#sebagiann").click(function(){
+                $("#txt").show();
+            });
+        })
+
+        $(document).ready(function(){
+            $("#flip").hover(function(){
+                $("#panel").slideToggle("slow");
+            });
+        })
+        
+    </script>
+    <style>
+        #flip{
+            border: solid 1px red;
+            width: 18rem;
+        }
+        #panel{
+            height: auto;
+            display: none;
+        }
+        img{
+            background-size: cover;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button id="hai">Gayuh Widyanata</button><br>
+
+    <label for="nama">Nama</label>
+    <input type="text" name="nama" class="iya"><br>
+    <label for="nama">Email</label>
+    <input type="text" name="email" class="iya"><br>
+
+    <h1>About</h1>
+    <p class="deskripsi">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim autem asperiores maxime
+        voluptatum, suscipit
+        recusandae quia voluptatibus vero totam voluptatem incidunt eius modi optio a nihil iste nemo laboriosam natus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate odio rerum culpa incidunt officiis
+        ullam voluptates, neque beatae reprehenderit. <span id="txt">Alias quaerat assumenda est aperiam quod vero veritatis expedita
+        rem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, tenetur perspiciatis sapiente
+        doloremque eum, explicabo, maxime animi sit error accusamus aperiam. Laboriosam impedit sit praesentium nesciunt
+        provident facere, quis ab.</span></p>
+    <button id="klik">hilangkan aku</button>
+    <button id="muncul">munculkan aku</button>
+    <button id="sebagian">Hilangkan aku sebagian</button>
+    <button id="sebagiann">munculkan aku sebagian</button><br><br>
+
+    <div id="flip">
+        <img src="gay.png" alt="">
+        <div id="panel" style="text-align: justify; padding: 20px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, illum laborum. Ipsum pariatur neque dicta rerum, necessitatibus ut fuga fugiat, molestiae consectetur incidunt perferendis harum labore qui! Vitae, alias illum. Lorem ipsum dolor 
+            </p>
+        </div>
+    </div>
+
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime cumque, totam tempora quo aut excepturi repudiandae sequi enim deleniti nostrum rem odit sint molestiae voluptatibus reiciendis vitae ducimus alias ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, labore cumque. Natus fugit sunt quam consectetur ullam, voluptates ipsa doloribus dolorum labore voluptatem, eos quas. Tempore minus eaque nostrum maiores.
+</body>
+
+</html>
